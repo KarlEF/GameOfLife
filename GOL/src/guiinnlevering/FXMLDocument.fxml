@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="anchpane" fx:controller="guiinnlevering.FXMLDocumentController"
+    prefHeight="500" prefWidth="500">
+    <padding>
+        <Insets top="25" bottom="25" left="25" right="25"/>
+    </padding>    
+        <HBox fx:id="buttonBox" AnchorPane.topAnchor="450" AnchorPane.leftAnchor="25" AnchorPane.rightAnchor="0">
+            <Button onAction="#drawGrid"  text="Start"/>
+            <Button text="Stop"/>
+            <Button text="Next"/>
+            <MenuButton text="Shape Collection">
+              <items>
+                    <MenuItem text="Shape 1"/>
+                    <MenuItem text="Shape 2"/>
+                </items>
+            </MenuButton>
+        </HBox>
+        
+        <Rectangle x="50" y="50" width="400" height="400" fill="#d9d9d9"/>
+        <Canvas fx:id="gridCanvas" height="400" width="400" AnchorPane.leftAnchor="25" AnchorPane.topAnchor="25"   />
+       
+</AnchorPane>
